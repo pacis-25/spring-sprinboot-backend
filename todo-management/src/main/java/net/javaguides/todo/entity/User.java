@@ -33,6 +33,6 @@ public class User {
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL) // use to load all roles
     @JoinTable(name = "users_roles",
     joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
-    inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+    inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id")) // use for checking roles
     private Set<Role> roles;
 }
